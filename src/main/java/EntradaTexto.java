@@ -84,27 +84,9 @@ public class EntradaTexto
 
         // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
         long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver += "Escrito hace ";
+        aDevolver += "Escrito hace 10 minutos";
 
-        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
-        if(numeroSegundos > 59){
-            aDevolver += numeroSegundos / 60 + " minutos";
-        }
-        else {
-            aDevolver += numeroSegundos + " segundos";
-        }
-        aDevolver += "\n";
 
-        // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (comentarios.size() == 0)         {
-            aDevolver += "No hay comentarios\n";
-        }
-        else {
-            aDevolver += "Comentarios: \n";
-            for(String comentarioActual : comentarios){
-                aDevolver += comentarioActual + "\n";
-            }
-        }
 
         return aDevolver;
     }
