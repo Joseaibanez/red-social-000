@@ -23,7 +23,16 @@ public class MuroTest {
         muro.addEntradaTexto(entrada03);
         muro.addEntradaFoto(entrada04);
 
+        assertEquals(
+                "Usuario: Nacho\nLikes: 0\nRecién llegado de mis vacaciones en Hawai!\nEscrito hace 10 minutos\n"+
+                "Usuario: Begoña\nLikes: 0\nEstá lloviendo ahí fuera...\nEscrito hace 10 minutos\n" +
+                "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nEscrito hace 10 minutos\n" +
+                "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nEscrito hace 10 minutos"
+                , muro.toString());
+
+
         System.out.println(muro);
+
     }
 
 }

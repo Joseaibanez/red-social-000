@@ -50,15 +50,15 @@ public class Muro
 
         // Buscamos todas las entradas de texto.
         for (EntradaTexto entrada : mensajes) {
-            aDevolver += entrada + "\n\n";
+            aDevolver += entrada + "\n";
         }
 
         // Buscamos todas las entradas con foto.
         for (EntradaFoto entrada : fotos) {
-            aDevolver += entrada + "\n\n";
+            aDevolver += entrada + "\n";
         }
 
-        return aDevolver;
+        return aDevolver.substring(0,aDevolver.length() - 1);
     }
 }
 

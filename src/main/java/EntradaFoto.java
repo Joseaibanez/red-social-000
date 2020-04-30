@@ -96,8 +96,7 @@ public class EntradaFoto
         aDevolver += "Titulo: " + titulo + "\n";
 
         // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver = "Escrito hace 10 minutos";
+        aDevolver += "Escrito hace 10 minutos";
 
 
 
