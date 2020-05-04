@@ -20,7 +20,6 @@ public class EntradaTexto extends Entrada
      * Constructor - Construye entradas a partir de un autor y un contenido.
      * Las entradas se crean sin ningun ' me gusta'.
      * La fecha de publicacion coincide con el momento en el que se crea la entrada.
-     * @param mensaje Contenido de la entrada.
      */
     public EntradaTexto (String texto, String autor) {
         super(autor);
@@ -40,7 +39,9 @@ public class EntradaTexto extends Entrada
         return mensaje;
     }
 
-
+    public void mostrarAutorYMensaje() {
+        System.out.println("Usuario: " + getUsuario() + "\n" + "Mensaje: " + mensaje);
+    }
 
     /**
      * Devuelve una cadena con toda la informacion de la entrada.

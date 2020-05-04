@@ -42,6 +42,7 @@ public class Entrada {
     public int getCantidadMeGusta() {
         return cantidadMeGusta;
     }
+
     /**
      * Anade un comentario a a la entrada.
      * @param text El comentario a anadir.
