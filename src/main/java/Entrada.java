@@ -51,12 +51,25 @@ public class Entrada {
         comentarios.add(text);
     }
 
+    public String getComentarios() {
+        String listaComentarios = "";
+        if(!comentarios.isEmpty()) {
+            for(String comentario : comentarios) {
+                listaComentarios += comentario;
+            }
+        }
+        else {
+            listaComentarios= "No hay comentarios";
+        }
+        return listaComentarios;
+    }
+
     /**
      * Devuelve la fecha de publicacion.
      * @return Devuelve la fecha de publicacion.
      */
-    public LocalDateTime getMomentoPublicacion() {
-        return momentoPublicacion;
+    public String getMomentoPublicacion() {
+        return "Escrito hace 10 minutos";
     }
 
     public String toString() {

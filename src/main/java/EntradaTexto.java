@@ -54,8 +54,8 @@ public class EntradaTexto extends Entrada
         aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
         aDevolver += mensaje + "\n";
 
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        aDevolver += "Escrito hace 10 minutos";
+        aDevolver += "Comentarios: " + getComentarios() + "\n";
+        aDevolver += "Momento de publicacion: " + getMomentoPublicacion();
         return aDevolver;
     }
 }

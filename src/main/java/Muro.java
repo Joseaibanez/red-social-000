@@ -58,7 +58,7 @@ public class Muro
             aDevolver += entrada + "\n";
         }
 
-        return aDevolver.substring(0,aDevolver.length() - 1);
+        return aDevolver.substring(0, aDevolver.length() - 1);
     }
 }
 

@@ -58,10 +58,8 @@ public class EntradaFoto extends Entrada
         aDevolver += "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
 
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        aDevolver += "Escrito hace 10 minutos";
-
-
+        aDevolver += "Comentarios: " + getComentarios() + "\n";
+        aDevolver += "Momento de publicacion: " + getMomentoPublicacion();
 
         return aDevolver;
     }

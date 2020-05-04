@@ -19,15 +19,17 @@ public class MuroTest {
         EntradaFoto entrada04 = new EntradaFoto("https://bit.ly/3cY9vtD", "Una foto de mi nevera", "Cristina");
 
         muro.addEntradaTexto(entrada01);
+        entrada01.addComentario("¡Vuelta a la rutina!");
         muro.addEntradaFoto(entrada02);
         muro.addEntradaTexto(entrada03);
         muro.addEntradaFoto(entrada04);
+        entrada04.addComentario("Deberías mandarla a arreglar...");
 
         assertEquals(
-                "Usuario: Nacho\nLikes: 0\nRecién llegado de mis vacaciones en Hawai!\nEscrito hace 10 minutos\n"+
-                "Usuario: Begoña\nLikes: 0\nEstá lloviendo ahí fuera...\nEscrito hace 10 minutos\n" +
-                "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nEscrito hace 10 minutos\n" +
-                "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nEscrito hace 10 minutos"
+                "Usuario: Nacho\nLikes: 0\nRecién llegado de mis vacaciones en Hawai!\nComentarios: ¡Vuelta a la rutina!\nMomento de publicacion: Escrito hace 10 minutos\n"+
+                "Usuario: Begoña\nLikes: 0\nEstá lloviendo ahí fuera...\nComentarios: No hay comentarios\nMomento de publicacion: Escrito hace 10 minutos\n" +
+                "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nComentarios: No hay comentarios\nMomento de publicacion: Escrito hace 10 minutos\n" +
+                "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nComentarios: Deberías mandarla a arreglar...\nMomento de publicacion: Escrito hace 10 minutos"
                 , muro.toString());
 
 
