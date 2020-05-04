@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 
 /**
  * Una entrada con imagenes
@@ -12,51 +9,25 @@ import java.time.temporal.ChronoUnit;
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto
+public class EntradaFoto extends Entrada
 {
-    // Usuario que crea la entrada.
-    private String usuario;
     // URL de la imagen.
     private String urlImagen;
     //Título de la entrada.
     private String titulo;
-    // Fecha de publicacion de la entrada.
-    private LocalDateTime momentoPublicacion;
-    // Numero de 'me gusta' de la entrada.
-    private int cantidadMeGusta;
-    // Comentarios de la entrada.
-    private ArrayList<String> comentarios;
+
 
     /**
      * Constructor - Construye entradas a partir de un autor, el titulo de la imagen y su URL.
      * Las entradas se crean sin ningun ' me gusta'.
      * La fecha de publicacion coincide con el momento en el que se crea la entrada.
-     * @param autor Autor de la entrada.
      * @param titulo Titulo de la imagen.
      * @param url URL de la imagen.
      */
-    public EntradaFoto (String autor, String url, String titulo) {
-        usuario = autor;
+    public EntradaFoto (String url, String titulo, String autor) {
+        super(autor);
         urlImagen = url;
         this.titulo = titulo;
-        momentoPublicacion = LocalDateTime.now();
-        cantidadMeGusta = 0;
-        comentarios = new ArrayList<>();
-    }
-
-    /**
-     * Anade un 'me gusta' a la entrada.
-     */
-    public void meGusta() {
-        cantidadMeGusta += 1;
-    }
-
-    /**
-     * Anade un comentario a a la entrada.
-     * @param textoComentario El comentario a anadir.
-     */
-    public void addComentario(String textoComentario) {
-        comentarios.add(textoComentario);
     }
 
     /**
@@ -76,22 +47,14 @@ public class EntradaFoto
     }
 
     /**
-     * Devuelve la fecha de publicacion.
-     * @return Devuelve la fecha de publicacion.
-     */
-    public LocalDateTime getMomentoPublicacion() {
-        return momentoPublicacion;
-    }
-
-    /**
      * Devuelve una cadena con toda la informacion de la entrada.
      * @return Devuelve una cadena con toda la informacion de la entrada.
      */
     @Override
     public String toString() {
         String aDevolver = "";
-        aDevolver += "Usuario: " + usuario + "\n";
-        aDevolver += "Likes: " + cantidadMeGusta + "\n";
+        aDevolver += "Usuario: " + getUsuario() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
         aDevolver += "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
 
