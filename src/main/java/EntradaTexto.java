@@ -9,7 +9,7 @@
  *  @version 1.0
  */
 
-public class EntradaTexto extends Entrada
+public class EntradaTexto extends EntradaConComentario
 {
 
     // Contenido de la entrada.

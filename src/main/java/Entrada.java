@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 
 /**
  * Una entrada con texto
@@ -18,14 +16,12 @@ public class Entrada {
     private LocalDateTime momentoPublicacion;
     // Numero de 'me gusta' de la entrada.
     private int cantidadMeGusta;
-    // Comentarios de la entrada.
-    private ArrayList<String> comentarios;
+
 
     public Entrada (String autor) {
         usuario = autor;
         momentoPublicacion = LocalDateTime.now();
         cantidadMeGusta = 0;
-        comentarios = new ArrayList<>();
     }
 
     /**
@@ -43,26 +39,6 @@ public class Entrada {
         return cantidadMeGusta;
     }
 
-    /**
-     * Anade un comentario a a la entrada.
-     * @param text El comentario a anadir.
-     */
-    public void addComentario(String text) {
-        comentarios.add(text);
-    }
-
-    public String getComentarios() {
-        String listaComentarios = "";
-        if(!comentarios.isEmpty()) {
-            for(String comentario : comentarios) {
-                listaComentarios += comentario;
-            }
-        }
-        else {
-            listaComentarios= "No hay comentarios";
-        }
-        return listaComentarios;
-    }
 
     /**
      * Devuelve la fecha de publicacion.

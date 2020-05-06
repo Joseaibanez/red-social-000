@@ -9,7 +9,7 @@
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto extends Entrada
+public class EntradaFoto extends EntradaConComentario
 {
     // URL de la imagen.
     private String urlImagen;
