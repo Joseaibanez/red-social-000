@@ -14,6 +14,8 @@ public class Muro
     private ArrayList <EntradaTexto> mensajes;
     // Entradas con imagenes
     private ArrayList <EntradaFoto> fotos;
+    // Eventos
+    private ArrayList <EntradaEvento> eventos;
 
     /**
      * Constructor - Construye e inicializa un muro vacio.
@@ -22,6 +24,7 @@ public class Muro
         //Inicializa mensajes y fotos.
         mensajes = new ArrayList<>();
         fotos = new ArrayList<>();
+        eventos = new ArrayList<>();
     }
 
     /**
@@ -41,6 +44,14 @@ public class Muro
     }
 
     /**
+     * Anade un evento al muro.
+     * @param evento El evento a anadir.
+     */
+    public void addEntradaEvento(EntradaEvento evento) {
+        eventos.add(evento);
+    }
+
+    /**
      * Devuelve una cadena con toda la informacion del muro.
      * @return Devuelve una cadena con toda la informacion del muro.
      */
@@ -56,6 +67,11 @@ public class Muro
         // Buscamos todas las entradas con foto.
         for (EntradaFoto entrada : fotos) {
             aDevolver += entrada + "\n";
+        }
+
+        // Buscamos todos los eventos.
+        for (EntradaEvento evento : eventos) {
+            aDevolver += evento + "\n";
         }
 
         return aDevolver.substring(0, aDevolver.length() - 1);
