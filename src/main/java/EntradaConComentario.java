@@ -27,4 +27,16 @@ public class EntradaConComentario extends Entrada {
         }
         return listaComentarios;
     }
+
+    /**
+     * Devuelve una cadena con toda la informacion del muro.
+     * @return Devuelve una cadena con toda la informacion del muro.
+     */
+    @Override
+    public String toString() {
+        String aDevolver = super.toString();;
+
+        aDevolver += "Comentarios: " + getComentarios() + "\n";
+        return aDevolver;
+    }
 }

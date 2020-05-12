@@ -49,6 +49,11 @@ public class Entrada {
     }
 
     public String toString() {
-        return "";
+        String aDevolver = "";
+        aDevolver += "Usuario: " + getUsuario() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
+        aDevolver += "Momento de publicacion: " + getMomentoPublicacion()+ "\n";
+
+        return aDevolver;
     }
 }

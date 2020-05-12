@@ -30,12 +30,12 @@ public class MuroTest {
         muro.addEntrada(evento02);
 
         assertEquals(
-                "Usuario: Nacho\nLikes: 0\nRecién llegado de mis vacaciones en Hawai!\nComentarios: ¡Vuelta a la rutina!\nMomento de publicacion: Escrito hace 10 minutos\n"+
-                        "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nComentarios: No hay comentarios\nMomento de publicacion: Escrito hace 10 minutos\n" +
-                "Usuario: Begoña\nLikes: 0\nEstá lloviendo ahí fuera...\nComentarios: No hay comentarios\nMomento de publicacion: Escrito hace 10 minutos\n" +
-                "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nComentarios: Deberías mandarla a arreglar...\nMomento de publicacion: Escrito hace 10 minutos\n" +
-                        "Usuario: Nacho\nLikes: 0\nNacho se ha unido al grupo Dam1\nMomento de publicacion: Escrito hace 10 minutos\n" +
-                        "Usuario: Cristina\nLikes: 0\nCristina ha cambiado su foto de perfil\nMomento de publicacion: Escrito hace 10 minutos"
+                "Usuario: Nacho\nLikes: 0\nMomento de publicacion: Escrito hace 10 minutos\nComentarios: ¡Vuelta a la rutina!\nRecién llegado de mis vacaciones en Hawai!\n"+
+                        "Usuario: Luis\nLikes: 0\nMomento de publicacion: Escrito hace 10 minutos\nComentarios: No hay comentarios\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\n" +
+                "Usuario: Begoña\nLikes: 0\nMomento de publicacion: Escrito hace 10 minutos\nComentarios: No hay comentarios\nEstá lloviendo ahí fuera...\n" +
+                "Usuario: Cristina\nLikes: 0\nMomento de publicacion: Escrito hace 10 minutos\nComentarios: Deberías mandarla a arreglar...\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\n" +
+                        "Usuario: Nacho\nLikes: 0\nMomento de publicacion: Escrito hace 10 minutos\nNacho se ha unido al grupo Dam1\n" +
+                        "Usuario: Cristina\nLikes: 0\nMomento de publicacion: Escrito hace 10 minutos\nCristina ha cambiado su foto de perfil"
                 , muro.toString());
 
 

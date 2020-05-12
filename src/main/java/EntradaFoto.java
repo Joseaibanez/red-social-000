@@ -52,15 +52,11 @@ public class EntradaFoto extends EntradaConComentario
      */
     @Override
     public String toString() {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
+        String aDevolver = super.toString();;
+
         aDevolver += "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
 
-        aDevolver += "Comentarios: " + getComentarios() + "\n";
-        aDevolver += "Momento de publicacion: " + getMomentoPublicacion();
-
-        return aDevolver;
+        return aDevolver.substring(0, aDevolver.length() - 1);
     }
 }

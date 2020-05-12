@@ -44,12 +44,9 @@ public class EntradaEvento extends Entrada
      */
     @Override
     public String toString() {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
-        aDevolver += descripcion + "\n";
+        String aDevolver = super.toString();;
 
-        aDevolver += "Momento de publicacion: " + getMomentoPublicacion();
-        return aDevolver;
+        aDevolver += descripcion + "\n";
+        return aDevolver.substring(0, aDevolver.length() - 1);
     }
 }

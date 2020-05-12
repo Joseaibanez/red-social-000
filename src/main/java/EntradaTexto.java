@@ -49,13 +49,9 @@ public class EntradaTexto extends EntradaConComentario
      */
     @Override
     public String toString() {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
-        aDevolver += mensaje + "\n";
+        String aDevolver = super.toString();;
 
-        aDevolver += "Comentarios: " + getComentarios() + "\n";
-        aDevolver += "Momento de publicacion: " + getMomentoPublicacion();
-        return aDevolver;
+        aDevolver += mensaje + "\n";
+        return aDevolver.substring(0, aDevolver.length() - 1);
     }
 }
