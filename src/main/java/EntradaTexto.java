@@ -54,4 +54,8 @@ public class EntradaTexto extends EntradaConComentario
         aDevolver += mensaje + "\n";
         return aDevolver.substring(0, aDevolver.length() - 1);
     }
+
+    public void mostrarDetallesPorPantalla() {
+        System.out.println("Mensaje: " + mensaje);
+    }
 }

@@ -49,4 +49,8 @@ public class EntradaEvento extends Entrada
         aDevolver += descripcion + "\n";
         return aDevolver.substring(0, aDevolver.length() - 1);
     }
+
+    public void mostrarDetallesPorPantalla() {
+        System.out.println("Evento: " + descripcion);
+    }
 }

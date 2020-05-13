@@ -41,7 +41,8 @@ public class MuroTest {
 
         System.out.println(muro);
 
+        System.out.println("PRUEBA DEL METODO PARA MOSTRAR TODOS LOS DETALLES" + "\n");
+        muro.mostrarDetallesTodasLasEntradas();
+
     }
-
-
 }

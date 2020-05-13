@@ -42,5 +42,11 @@ public class Muro
 
         return aDevolver.substring(0, aDevolver.length() - 1);
     }
+
+    public void mostrarDetallesTodasLasEntradas() {
+        for (Entrada entradaActual : entradas) {
+            entradaActual.mostrarDetallesPorPantalla();
+        }
+    }
 }
 

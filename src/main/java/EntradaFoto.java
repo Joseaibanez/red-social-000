@@ -59,4 +59,9 @@ public class EntradaFoto extends EntradaConComentario
 
         return aDevolver.substring(0, aDevolver.length() - 1);
     }
+
+    public void mostrarDetallesPorPantalla() {
+        System.out.println("Url: " + urlImagen);
+        System.out.println("Titulo: " + titulo);
+    }
 }
