@@ -25,7 +25,18 @@ public class Muro
         entradas.add(entrada);
     }
 
-
+    public ArrayList getUrlsFotos() {
+        ArrayList<String> listaUrls = new ArrayList<>();
+        for(Entrada entrada : entradas) {
+            if(entrada instanceof EntradaFoto) {
+                listaUrls.add(((EntradaFoto) entrada).getUrlImagen());
+            }
+        }
+        for(String url : listaUrls) {
+            System.out.println(url);
+        }
+        return listaUrls;
+    }
 
     /**
      * Devuelve una cadena con toda la informacion del muro.

@@ -44,5 +44,7 @@ public class MuroTest {
         System.out.println("PRUEBA DEL METODO PARA MOSTRAR TODOS LOS DETALLES" + "\n");
         muro.mostrarDetallesTodasLasEntradas();
 
+        System.out.println("PRUEBA DEL METODO PARA MOSTRAR TODas las Url" + "\n");
+        muro.getUrlsFotos();
     }
 }
